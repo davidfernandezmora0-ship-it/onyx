@@ -10,7 +10,7 @@
 <meta property="og:description" content="Cortes, mechas, color y peinados de novia en Las Rozas. 5★ en Google.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_ES">
-<meta property="og:image" content="fotos/hero.jpg">
+<meta property="og:image" content="fotos/balayage.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
@@ -20,7 +20,7 @@
   "@context": "https://schema.org",
   "@type": "HairSalon",
   "name": "ArysPache Peluquería",
-  "image": "fotos/hero.jpg",
+  "image": "fotos/balayage.jpg",
   "telephone": "+34603642477",
   "priceRange": "€€",
   "address": {
@@ -104,6 +104,7 @@ nav li:last-child a{border:0}
 /* Hero */
 .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:var(--white);padding:120px 0 64px;background:var(--ink)}
 .hero .media{position:absolute;inset:0;overflow:hidden}
+.hero .media img{object-position:60% 30%}
 .hero .media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,18,18,.35) 0%,rgba(20,18,18,.55) 55%,rgba(20,18,18,.92) 100%)}
 .hero-content{position:relative;max-width:640px}
 .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);padding:7px 14px;border-radius:999px;font-size:.85rem;margin-bottom:22px}
@@ -142,10 +143,12 @@ nav li:last-child a{border:0}
 
 /* Gallery */
 .gallery-grid{display:grid;gap:16px;margin-top:40px}
-.pair{display:grid;grid-template-columns:1fr 1fr;gap:4px;border-radius:var(--radius);overflow:hidden}
-.pair .ph{aspect-ratio:3/4}
-.pair .tag{position:absolute;top:10px;left:10px;z-index:2;background:rgba(20,18,18,.75);color:var(--white);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:999px}
-.pair .ph.after .tag{background:var(--gold)}
+.work{position:relative;border-radius:var(--radius);overflow:hidden}
+.work .ph{aspect-ratio:3/4}
+.work img{transition:transform .6s ease}
+.work:hover img{transform:scale(1.04)}
+.work figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 18px 16px;background:linear-gradient(180deg,rgba(20,18,18,0),rgba(20,18,18,.75));color:var(--white);font-family:var(--serif);font-size:1.15rem}
+.work figcaption span{display:block;font-family:var(--sans);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--nude);margin-bottom:2px}
 .gallery-cta{margin-top:32px}
 
 /* Reviews */
@@ -240,6 +243,8 @@ footer ul{list-style:none;display:grid;gap:6px}
   .nav-cta{margin:0}
   .nav-cta .btn{padding:10px 20px;opacity:1}
   .hero{align-items:center}
+  .hero .media{left:auto;width:48%}
+  .hero .media::after{background:linear-gradient(90deg,var(--ink) 0%,rgba(20,18,18,.35) 30%,rgba(20,18,18,0) 70%)}
   .about-grid,.bridal-grid{grid-template-columns:1fr 1fr;gap:72px}
   .cards{grid-template-columns:repeat(3,1fr)}
   .gallery-grid{grid-template-columns:repeat(3,1fr)}
@@ -274,7 +279,7 @@ footer ul{list-style:none;display:grid;gap:6px}
   <!-- 1. HERO -->
   <section class="hero" id="inicio">
     <div class="media ph" data-label="">
-      <img src="fotos/hero.jpg" alt="Clienta con melena brillante y mechas recién hechas en ArysPache Peluquería, Las Rozas" fetchpriority="high">
+      <img src="fotos/balayage.jpg" alt="Clienta con melena ondulada y balayage dorado hecho en ArysPache Peluquería, Las Rozas" fetchpriority="high">
     </div>
     <div class="wrap">
       <div class="hero-content">
@@ -372,22 +377,22 @@ footer ul{list-style:none;display:grid;gap:6px}
     <div class="wrap">
       <div class="center reveal">
         <span class="eyebrow">Galería</span>
-        <h2>Antes y después</h2>
-        <p class="lead">Algunos de los cambios de nuestras clientas. <span class="placeholder-tag">[SUSTITUIR POR FOTOS REALES DE INSTAGRAM]</span></p>
+        <h2>Nuestros trabajos</h2>
+        <p class="lead">Color con brillo, mechas naturales y ondas con movimiento. Así salen nuestras clientas del salón.</p>
       </div>
       <div class="gallery-grid">
-        <div class="pair reveal">
-          <div class="ph" data-label="[FOTO ANTES 1]"><span class="tag">Antes</span><img src="fotos/antes-1.jpg" alt="Melena castaña sin brillo antes del cambio de color" loading="lazy"></div>
-          <div class="ph after" data-label="[FOTO DESPUÉS 1]"><span class="tag">Después</span><img src="fotos/despues-1.jpg" alt="Melena con mechas balayage luminosas después del servicio en ArysPache" loading="lazy"></div>
-        </div>
-        <div class="pair reveal">
-          <div class="ph" data-label="[FOTO ANTES 2]"><span class="tag">Antes</span><img src="fotos/antes-2.jpg" alt="Pelo largo con puntas abiertas antes del corte" loading="lazy"></div>
-          <div class="ph after" data-label="[FOTO DESPUÉS 2]"><span class="tag">Después</span><img src="fotos/despues-2.jpg" alt="Corte a media melena con movimiento después del servicio" loading="lazy"></div>
-        </div>
-        <div class="pair reveal">
-          <div class="ph" data-label="[FOTO ANTES 3]"><span class="tag">Antes</span><img src="fotos/antes-3.jpg" alt="Raíces y canas visibles antes del tinte" loading="lazy"></div>
-          <div class="ph after" data-label="[FOTO DESPUÉS 3]"><span class="tag">Después</span><img src="fotos/despues-3.jpg" alt="Color uniforme y brillante después del tinte en ArysPache" loading="lazy"></div>
-        </div>
+        <figure class="work reveal">
+          <div class="ph"><img src="fotos/balayage.jpg" alt="Melena morena con balayage dorado y ondas al agua, vista de perfil" loading="lazy"></div>
+          <figcaption><span>Color</span>Balayage dorado</figcaption>
+        </figure>
+        <figure class="work reveal">
+          <div class="ph"><img src="fotos/rubio.jpg" alt="Melena larga rubia con mechas de luz y ondas suaves, vista de espaldas" loading="lazy"></div>
+          <figcaption><span>Mechas</span>Rubio luminoso</figcaption>
+        </figure>
+        <figure class="work reveal">
+          <div class="ph"><img src="fotos/semirrecogido.jpg" alt="Semirrecogido con ondas marcadas sobre melena castaña con reflejos" loading="lazy"></div>
+          <figcaption><span>Peinado</span>Semirrecogido con ondas</figcaption>
+        </figure>
       </div>
       <div class="center gallery-cta reveal">
         <a class="btn btn-dark" href="https://www.instagram.com/aryspache.peluqueria/" target="_blank" rel="noopener">Ver más en Instagram</a>
@@ -454,8 +459,8 @@ footer ul{list-style:none;display:grid;gap:6px}
         </ul>
         <a class="btn btn-gold wa-link" data-msg="Hola Arys, me gustaría pedir información y una prueba para un evento" href="#">Pedir mi prueba</a>
       </div>
-      <div class="bridal-photo ph reveal" data-label="[FOTO DE NOVIA PEINADA POR ARYS]">
-        <img src="fotos/novia.jpg" alt="Novia con recogido romántico y maquillaje natural realizado por ArysPache Peluquería" loading="lazy">
+      <div class="bridal-photo ph reveal" data-label="">
+        <img src="fotos/semirrecogido.jpg" alt="Semirrecogido romántico con ondas para invitada, hecho en ArysPache Peluquería" loading="lazy">
       </div>
     </div>
   </section>
